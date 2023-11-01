@@ -1,0 +1,59 @@
+*{
+    font-family: 'Times New Roman', Times, serif
+}
+body{
+    background-image: url(/img/background.jpg);
+    background-repeat: no-repeat;
+    
+}
+td{
+    border: 2px solid rgb(8, 8, 8);
+    border-radius: 5% 5% 5% 5%;
+    width: 200px;
+    height: 200px;
+    background-image: url(/img/tło.jpg);
+    background-size: cover;
+}
+td:hover{
+    background-image: none;
+    
+}
+#board {
+    border: 5px double rgb(23, 13, 11);
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 50px;
+    background-color: rgb(137, 102, 226);
+    opacity: 80%;
+    border-radius: 5% 5% 5% 5%;
+    text-align: center;
+    font-size: 25px;
+    
+}
+button{
+    background-image: url(img/tło.jpg);
+    border-radius: 5% 5% 5% 5%;
+    border: 1px double rgb(23, 13, 11);
+    margin-bottom: auto;
+    width: 310px;
+    height: 60px;
+    font-size: 30px;
+    visibility:visible;
+}
+button:hover{
+    background-image: none;
+    background-color: rgb(240, 240, 240);
+}
+#btns{
+    background-color: aquamarine;
+    margin-left: auto;
+    margin-right: auto;
+    width: 620px;
+    height: auto;
+}
+
+    
+    
