@@ -17,19 +17,25 @@ const winConditionsColor = [
     [0, 3, 6], [0, 1, 2], [1, 4, 7],
     [2, 5, 8], [0, 4, 8], [2, 4, 6],
 ];
-
-function light() {
-    for (let y = 0; y < 3; y++) {
-        poz = winConditionsColor[WinnerPositionArray][y];
-        redLight(poz + 1);
-    }
-}
-
 let turn = player1;     //domyślnie zaczyna gracz 1
 function tekst(text, color) {
     document.querySelector("#board").style.backgroundColor = color;
     document.querySelector("#board").textContent = text;
 }
+
+function light() {
+    for (let y = 0; y < 3; y++) {
+        poz = winConditionsColor[WinnerPositionArray][y];
+        function redLightInterval(poz) {
+            setInterval(function () {
+                redLight(poz + 1);
+            }, 100);
+        }
+        redLightInterval(poz);
+    }
+}
+
+
 
 
 
@@ -120,7 +126,7 @@ function kliknij(x) {
 const array1 = [t1, t2, t3, t4, t5, t6, t7, t8, t9];
 array1.forEach(element => kliknij(element));
 
-function flash(id, kolor, czas, kolor2, czas2) {
+function flash(id, kolor, czas, kolor2) {
     let identyfikator = '#t' + id;
     document.querySelector(identyfikator).style.border = kolor;
     setTimeout(function () {
@@ -129,7 +135,7 @@ function flash(id, kolor, czas, kolor2, czas2) {
 }
 
 function redLight(x) {
-    flash(x, '5px dashed red', 300, '5px dashed blue', 300);
+    flash(x, '5px solid red', 500, '5px solid blue', 500);
 }
 
 
