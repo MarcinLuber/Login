@@ -1,10 +1,11 @@
 *{
-    font-family: 'Times New Roman', Times, serif
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(201, 212, 208);
     
 }
 body{
-    background-image: url(/img/background.jpg);
-    background-repeat: no-repeat;
+    /* background-image: url(/img/background.jpg);
+    background-repeat: no-repeat; */
     
 }
 td{
@@ -45,13 +46,13 @@ button:hover{
     background-color: rgb(240, 240, 240);
 }
 #btns{
-    background-color: aquamarine;
+    background-color: rgb(227, 229, 156);
     margin: auto auto;
-   
     width: 550px;
     height: auto;
-    
 }
+   
+    
 
     
     

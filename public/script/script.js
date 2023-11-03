@@ -29,7 +29,7 @@ function light() {
         function redLightInterval(poz) {
             setInterval(function () {
                 redLight(poz + 1);
-            }, 100);
+            }, 2000);
         }
         redLightInterval(poz);
     }
@@ -135,7 +135,7 @@ function flash(id, kolor, czas, kolor2) {
 }
 
 function redLight(x) {
-    flash(x, '5px solid red', 500, '5px solid blue', 500);
+    flash(x, '5px solid red', 500, '5px dotted blue', 500);
 }
 
 

@@ -1,5 +1,4 @@
 const express = require('express');
-const path = require('path');
 const bcrypt = require('bcrypt');
 const collection = require('./config')
 
@@ -23,6 +22,10 @@ app.get('/signup', (req, res) => {
     res.render('signup')
 })
 
+app.get('/logout', (req, res) => {
+    res.redirect('/');
+});
+
 //register new user
 app.post('/signup', async (req, res) => {
 
@@ -34,7 +37,11 @@ app.post('/signup', async (req, res) => {
     const userCheck = await collection.findOne({ name: data.name })
 
     if (userCheck) {
-        res.send('User already exist. Plase choose a different username')
+        // res.render('home');
+        app.get('/');
+        // next();
+        res.send(`<a href="/signup"a>Powróc na strone główną</>
+        <p>User already exist. Plase choose a different username</p>`)
     } else {
         //hash pasword with bcrypt
         const saltRounds = 10;
@@ -65,6 +72,7 @@ app.post('/login', async (req, res) => {
         res.send('wrong details')
     }
 })
+
 
 
 
