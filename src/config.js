@@ -5,7 +5,7 @@ const connect = mongoose.connect('mongodb://127.0.0.1:27017/Login');
 //check connection to database
 
 connect.then(() => {
-    console.log('database connected!!!')
+    console.log('database connected on http://localhost:5000')
 })
     .catch(() => {
         console.log('database cannot be connected')
