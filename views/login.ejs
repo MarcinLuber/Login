@@ -8,11 +8,13 @@
     <link rel="stylesheet" href="css/style.css">
 
 </head>
+
 <body>
-<div class="form-container-for-container">
+  
+ <div class="form-container-for-container">
     <div class="form-container">
         <h2><hr>LOGIN<hr></h2>
-        
+  
         <form action="/login" method="post">
             <div class="form-group">
                 <label for="name"><hr>Name:<hr></label>
@@ -25,7 +27,13 @@
             <button type="submit" class="submit-btn">SUBMIT</button>
         </form>
         <p><hr>Don't have an account? <a href="/signup">Signup</a><hr></p>
-    </div>
+        
+        
+        <%   if(typeof message != "undefined" && message) { %>
+            <p><strong><%= message %></strong></p>
+        <% }    %>  
+        <hr>
+        </div>
 </div>    
 
 </body>

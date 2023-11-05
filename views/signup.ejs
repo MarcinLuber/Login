@@ -23,7 +23,12 @@
             </div>
             <button type="submit" class="submit-btn">Signup</button>
         </form>
-        <p><hr>BACK TO LOGIN PAGE <a href="/">LOGIN<hr></a></p>
+        <p><hr>BACK TO LOGIN PAGE <a href="/">LOGIN</a></p>
+        
+        <%   if(typeof message != "undefined" && message) { %>
+            <p><strong><%= message %></strong></p>
+        <% }    %> 
+        <hr> 
      </div>
 </div>
 </body>

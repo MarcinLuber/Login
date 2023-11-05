@@ -1,50 +1,79 @@
 *{
     font-family: 'Times New Roman', Times, serif;
-    background-color: rgb(201, 212, 208);
+}
+body{
+    background-color: rgb(184, 220, 220);
+    
+    /* background-image: url(/img/marina-reich-HYZLZYJfkIk-unsplash.jpg);
+    background-size: cover; */
     
 }
 td{
-    border: 2px solid rgb(8, 8, 8);
+    border: 5px solid rgb(8, 8, 8);
     border-radius: 5% 5% 5% 5%;
-    width: 180px;
-    height: 180px;
-    background-image: url(/img/tło.jpg);
+    width: 120px;
+    height: 120px;
+    /* background-image: url(/img/tło.jpg); */
+    background-color: rgb(77, 79, 79);
     background-size: cover;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 td:hover{
-    background-image: none;
+    background-color: black;
     
 }
 #board {
-    border: 5px double rgb(23, 13, 11);
-    width: 540px;
-    height: 60px;
+    border: 5px solid rgb(23, 13, 11);
+    width: 390px;
+    height: 40px;
     background-color: rgb(137, 102, 226);
-    opacity: 80%;
     border-radius: 5% 5% 5% 5%;
     text-align: center;
-    font-size: 40px;
+    font-size: 30px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    
 }
 
 button{
     background-image: url(/img/tło.jpg);
     border-radius: 5% 5% 5% 5%;
-    border: 1px double rgb(23, 13, 11);
-    width: 273px;
-    height: 80px;
-    font-size: 30px;
+    border: 5px solid rgb(23, 13, 11);
+    width: 195px;
+    height: 40px;
+    font-size: 20px;
     visibility:visible;
     margin-bottom: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 button:hover{
-    background-image: none;
     background-color: rgb(240, 240, 240);
 }
 #btns{
-    background-color: rgb(227, 229, 156);
     margin: auto auto;
-    width: 550px;
+    width: 400px;
     height: auto;
+}
+.form-container {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    background-color: rgb(184, 220, 220);
+    opacity: 70%;
+    width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    opacity: 75%;
+    border: 5px solid black;
+    border-radius: 10px 30px / 100px;
+}
+.form-container-for-container {
+    border-radius: 10px 100px / 120px;
+    border: 5px double black;
+    background-color: rgb(77, 79, 79);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    width: 1300px;
+    margin: auto auto auto auto;
+    padding: 20px;
+    margin-top: 20px;
+    
 }
    
     
