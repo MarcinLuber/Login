@@ -43,11 +43,23 @@ h2{
     border: 5px double black;
     background-color: rgb(77, 79, 79);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-    width: 450px;
+    width: 1600px;
     margin: 0 auto;
     padding: 5px;
-    
-    
+    animation: changeWidth 2s forwards;
+
+}
+@keyframes changeWidth {
+    /* Define keyframes for the animation */
+    from {
+        width: 1600px;
+    }
+    to {
+        width: 450px;
+    }
+}
+.form-container-for-container {
+    animation-delay: 5s;
 }
 .form-group {
     margin-bottom: 15px;
