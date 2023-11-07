@@ -44,14 +44,14 @@ function changePlayer() {
         if (turn === player2) {
             turn = player1;
             tekst('ZMIENIONO NA ⦾', 'red');
-            document.querySelector("button").style.backgroundColor = 'red';
+            // document.querySelector("button").style.backgroundColor = 'red';
         } else {
             turn = player2;
             tekst('ZMIENIONO NA ⊗', 'blue');
-            document.querySelector("button").style.backgroundColor = 'blue';
+            // document.querySelector("button").style.backgroundColor = 'blue';
         }
     } else {
-        alert('NIE MOŻNA ZMIENIAĆ GRACZA PODCZAS GRY!');
+        tekst('ZMIANA GRACZA ZABLOKOWANA PODCZAS GRY!', 'grey');
     }
 }
 

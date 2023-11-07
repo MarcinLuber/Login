@@ -8,6 +8,7 @@ body{
     height: 100vh;
     
     
+    
 }
 td{
     border: 5px solid rgb(8, 8, 8);
@@ -28,12 +29,16 @@ td:hover{
 #board {
     border: 5px solid rgb(23, 13, 11);
     width: 390px;
-    height: 40px;
+    height: 60px;
     background-color: rgb(137, 102, 226);
     border-radius: 5% 5% 5% 5%;
     text-align: center;
-    font-size: 30px;
+    font-size: 25px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    opacity: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     
 }
 
@@ -41,7 +46,7 @@ button{
     background-image: url(/img/tło.jpg);
     border-radius: 5% 5% 5% 5%;
     border: 5px solid rgb(23, 13, 11);
-    width: 195px;
+    width: 197px;
     height: 40px;
     font-size: 20px;
     visibility:visible;
@@ -63,6 +68,7 @@ button:hover{
     background-color: rgb(77, 79, 79);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
     width: 800px;
+    /* height: px; */
     margin: auto auto auto auto;
     padding: 20px;
     margin-top: 20px;
