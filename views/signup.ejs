@@ -15,7 +15,7 @@
         <form action="/signup" method="post">
             <div class="form-group">
                 <label for="name"><hr>Name:<hr></label>
-                <input type="text" id="name" name="username" placeholder="Enter your name" required autocomplete="off">
+                <input type="text" id="name" name="username" placeholder="Enter your name" required autocomplete="off" pattern="[a-zA-Z0-9]+" title="Wprowadź tylko litery i cyfry">
             </div>
             <div class="form-group">
                 <label for="password"><hr>Password:<hr></label>
