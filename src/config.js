@@ -1,5 +1,9 @@
+
 const mongoose = require('mongoose');
-const connect = mongoose.connect('mongodb://127.0.0.1:27017/Login');
+const connect = mongoose.connect('mongodb+srv://kaharottoml:gBxqBS4ryyUJzIqO@login.idiope7.mongodb.net/');
+
+// local db
+// const connect = mongoose.connect('mongodb://127.0.0.1:27017/Login');
 
 
 //check connection to database
