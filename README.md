@@ -6,5 +6,5 @@ npm install mongoose
 
 npm install bcrypt
 
-npm install ijs
+npm install ejs
 
