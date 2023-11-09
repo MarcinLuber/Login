@@ -8,3 +8,5 @@ npm install bcrypt
 
 npm install ejs
 
+npm i nodemon
+
