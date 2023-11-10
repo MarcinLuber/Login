@@ -37,19 +37,23 @@ Watch
 Clone the project
 
 ```bash
-  git clone https://github.com/
+  git clone https://github.com/MarcinLuber/Login.git
 ```
 Install dependencies
 
 ```bash
   npm install
 ```
-```bash
-  install mongodb atlas
-```
 
-and use in config.js:
+Install mongoDb (windows64)
+```bash
+https://fastdl.mongodb.org/windows/mongodb-windows-x86_64-7.0.2-signed.msi
+```
+  
+use in config.js:
+```bash
 'mongodb://127.0.0.1:27017/Login'
+```
 
 
 Start the server development
@@ -61,4 +65,5 @@ Start the server development
 
 
 # CONTACT ME
-<a href="mailto:kaharotto@gmail.com">kaharotto@gmail.com</a>
+
+If you would like to get in touch, feel free to email me at: [kaharotto.ml@gmail.com](mailto:kaharotto.ml@gmail.com)
