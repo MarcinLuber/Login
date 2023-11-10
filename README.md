@@ -1,5 +1,8 @@
 # DEMO
-https://youtu.be/8d5NCJSuhgo
+<video width="320" height="240" controls>
+  <source src="https://youtu.be/8d5NCJSuhgo" type="video/mp4">
+  Twoja przeglądarka nie obsługuje tagu video.
+</video>
 
 #WEBSITE
 https://logowanie-dg95.onrender.com/
@@ -37,11 +40,13 @@ Copy code
 
 A brief project description or its purpose.
 
-## Installation
+## Installation local
 
 Installation instructions:
 
 ```bash
 $ git clone https://github.com/MarcinLuber/Login.git
+```bash
+
 $ cd repository-name
 # Additional installation steps if any
