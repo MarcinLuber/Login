@@ -1,6 +1,13 @@
-
+require('dotenv').config()
 const mongoose = require('mongoose');
-const connect = mongoose.connect('mongodb+srv://kaharottoml:gBxqBS4ryyUJzIqO@login.idiope7.mongodb.net/');
+
+
+
+const dbUser = process.env.DB_USERNAME;
+const dbPassword = process.env.DB_PASSWORD;
+
+const connect = mongoose.connect(`mongodb+srv://${dbUser}:${dbPassword}@login.idiope7.mongodb.net/`);
+
 
 // local db
 // const connect = mongoose.connect('mongodb://127.0.0.1:27017/Login');
