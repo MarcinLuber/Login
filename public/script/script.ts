@@ -1,32 +1,36 @@
-let ruch = 0;
-let pos;
-let poz;
-let code;
-let wynik;
-let WinnerPositionArray;
-const player1 = 'url(img/o.jpg)';
-const player2 = 'url(img/x.jpg)';
+let ruch: number = 0;
+let pos: number;
+let poz: number;
+let code: boolean;
+let wynik: boolean;
+let WinnerPositionArray: number;
+const player1: string = 'url(img/o.jpg)';
+const player2: string = 'url(img/x.jpg)';
 
-const winConditions = [
+const winConditions: number[][] = [
     [0, 1, 2], [3, 4, 5], [6, 7, 8],
     [0, 3, 6], [0, 1, 2], [1, 4, 7],
     [2, 5, 8], [0, 4, 8], [2, 4, 6],
 ];
-const winConditionsColor = [
+const winConditionsColor: number[][] = [
     [0, 1, 2], [3, 4, 5], [6, 7, 8],
     [0, 3, 6], [0, 1, 2], [1, 4, 7],
     [2, 5, 8], [0, 4, 8], [2, 4, 6],
 ];
-let turn = player1;     //domyślnie zaczyna gracz 1
-function tekst(text, color) {
-    document.querySelector("#board").style.backgroundColor = color;
-    document.querySelector("#board").textContent = text;
+let turn: string = player1; // Default start is player 1
+
+function tekst(text: string, color: string): void {
+    const boardElement = document.querySelector < HTMLElement > ("#board");
+    if (boardElement) {
+        boardElement.style.backgroundColor = color;
+        boardElement.textContent = text;
+    }
 }
 
-function light() {
+function light(): void {
     for (let y = 0; y < 3; y++) {
         poz = winConditionsColor[WinnerPositionArray][y];
-        function redLightInterval(poz) {
+        function redLightInterval(poz: number): void {
             setInterval(function () {
                 redLight(poz + 1);
             }, 2000);
@@ -35,33 +39,35 @@ function light() {
     }
 }
 
-
-
-
-
-function changePlayer() {
+function changePlayer(): void {
     if (ruch < 1) {
         if (turn === player2) {
             turn = player1;
             tekst('ZMIENIONO NA ⦾', 'red');
-            // document.querySelector("button").style.backgroundColor = 'red';
+            const buttonElement = document.querySelector < HTMLElement > ("button");
+            if (buttonElement) {
+                buttonElement.style.backgroundColor = 'red';
+            }
         } else {
             turn = player2;
             tekst('ZMIENIONO NA ⊗', 'blue');
-            // document.querySelector("button").style.backgroundColor = 'blue';
+            const buttonElement = document.querySelector < HTMLElement > ("button");
+            if (buttonElement) {
+                buttonElement.style.backgroundColor = 'blue';
+            }
         }
     } else {
-        tekst('ZMIANA GRACZA ZABLOKOWANA PODCZAS GRY!', 'grey');
+        alert('NIE MOŻNA ZMIENIAĆ GRACZA PODCZAS GRY!');
     }
 }
 
-function checkWin() {
+function checkWin(): void {
     if (ruch === 9 && wynik === false) {
         tekst('REMIS', 'green');
     }
 
     for (let x = 0; x < 9; x++) {
-        let isBelowThreshold = (currentValue) => currentValue === 'o';
+        let isBelowThreshold = (currentValue: string) => currentValue === 'o';
         wynik = winConditions[x].every(isBelowThreshold);
         if (wynik === true) {
             WinnerPositionArray = x;
@@ -70,8 +76,9 @@ function checkWin() {
             code = true;
         }
     }
+
     for (let x = 0; x < 9; x++) {
-        let isBelowThreshold = (currentValue) => currentValue === 'x';
+        let isBelowThreshold = (currentValue: string) => currentValue === 'x';
         wynik = winConditions[x].every(isBelowThreshold);
         if (wynik === true) {
             WinnerPositionArray = x;
@@ -82,12 +89,12 @@ function checkWin() {
     }
 }
 
-function checkAll(tekst) {
+function checkAll(tekst: string): void {
     for (let x = 0; x < 9; x++) {
         spr(x);
     }
 
-    function spr(x) {
+    function spr(x: number): void {
         for (let y = 0; y < 3; y++) {
             if (winConditions[x][y] == pos) {
                 winConditions[x][y] = tekst;
@@ -96,22 +103,22 @@ function checkAll(tekst) {
     }
 }
 
-function kliknij(x) {
+function kliknij(x: HTMLElement): void {
     x.addEventListener("click", function () {
         if (!x.classList.contains('clicked')) {
             if (!code) {
                 if (turn === player1) {
-                    x.style.backgroundImage = player1;
+                    (x as HTMLElement).style.backgroundImage = player1;
                     tekst('KOLEJ GRACZA : ⊗', 'blue');
-                    pos = x.getAttribute("data-position");
+                    pos = Number(x.getAttribute("data-position"));
                     checkAll('o');
                     ruch++;
                     turn = player2;
                 } else {
-                    x.style.backgroundImage = player2;
+                    (x as HTMLElement).style.backgroundImage = player2;
                     turn = player1;
                     tekst('KOLEJ GRACZA : ⦾', 'red');
-                    pos = x.getAttribute("data-position");
+                    pos = Number(x.getAttribute("data-position"));
                     checkAll('x');
                     ruch++;
                 }
@@ -123,19 +130,20 @@ function kliknij(x) {
     });
 }
 
-const array1 = [t1, t2, t3, t4, t5, t6, t7, t8, t9];
+const array1: HTMLElement[] = [t1, t2, t3, t4, t5, t6, t7, t8, t9];
 array1.forEach(element => kliknij(element));
 
-function flash(id, kolor, czas, kolor2) {
+function flash(id: number, kolor: string, czas: number, kolor2: string): void {
     let identyfikator = '#t' + id;
-    document.querySelector(identyfikator).style.border = kolor;
-    setTimeout(function () {
-        document.querySelector(identyfikator).style.border = kolor2;
-    }, czas);
+    const element = document.querySelector < HTMLElement > (identyfikator);
+    if (element) {
+        element.style.border = kolor;
+        setTimeout(function () {
+            element.style.border = kolor2;
+        }, czas);
+    }
 }
 
-function redLight(x) {
-    flash(x, '5px solid red', 500, '5px dotted blue', 500);
+function redLight(x: number): void {
+    flash(x, '5px solid red', 500, '5px dotted blue');
 }
-
-

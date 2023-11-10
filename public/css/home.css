@@ -1,59 +1,121 @@
 *{
-    font-family: 'Times New Roman', Times, serif
+    font-family: 'Times New Roman', Times, serif;
 }
 body{
-    background-image: url(/img/background.jpg);
+    /* background-color: rgb(184, 220, 220); */
     background-repeat: no-repeat;
+    background-image: linear-gradient(180deg,rgb(184, 220, 220),rgb(128,128,128),rgba(180, 109, 109, 0.182),rgb(0,0,0));
+    height: 100vh;
+    
+    
     
 }
 td{
-    border: 2px solid rgb(8, 8, 8);
+    border: 5px solid rgb(8, 8, 8);
     border-radius: 5% 5% 5% 5%;
-    width: 200px;
-    height: 200px;
+    width: 120px;
+    height: 120px;
     background-image: url(/img/tło.jpg);
+    background-color: rgb(77, 79, 79);
     background-size: cover;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 td:hover{
-    background-image: none;
+    /* background-color: black; */
+    background-image: url(/img/tłohover.jpg);
+    
     
 }
 #board {
-    border: 5px double rgb(23, 13, 11);
-    position: fixed;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 300px;
-    height: 50px;
+    border: 5px solid rgb(23, 13, 11);
+    width: 390px;
+    height: 60px;
     background-color: rgb(137, 102, 226);
-    opacity: 80%;
     border-radius: 5% 5% 5% 5%;
     text-align: center;
     font-size: 25px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    opacity: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     
 }
+
 button{
-    background-image: url(img/tło.jpg);
+    background-image: url(/img/tło.jpg);
     border-radius: 5% 5% 5% 5%;
-    border: 1px double rgb(23, 13, 11);
-    margin-bottom: auto;
-    width: 310px;
-    height: 60px;
-    font-size: 30px;
+    border: 5px solid rgb(23, 13, 11);
+    width: 197px;
+    height: 40px;
+    font-size: 20px;
     visibility:visible;
+    margin-bottom: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 button:hover{
-    background-image: none;
     background-color: rgb(240, 240, 240);
 }
 #btns{
-    background-color: aquamarine;
-    margin-left: auto;
-    margin-right: auto;
-    width: 620px;
+    margin: auto auto;
+    width: 400px;
     height: auto;
 }
+
+.form-container-for-container {
+    border-radius: 10px 100px / 120px;
+    border: 5px double black;
+    background-color: rgb(77, 79, 79);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    width: 800px;
+    /* height: px; */
+    margin: auto auto auto auto;
+    padding: 20px;
+    margin-top: 20px;
+    animation: changeWidth1 6s forwards;
+}
+@keyframes changeWidth1 {
+    /* Define keyframes for the animation */
+    from {
+        width: 800px;
+        background-color: rgb(18, 21, 20);
+    }
+    to {
+        width: 1200px;
+        background-color: rgb(77, 79, 79);
+    }
+}
+.form-container-for-container {
+    animation-delay: 3s;
+}
+.form-container {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    background-color: rgb(184, 220, 220);
+    opacity: 70%;
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    opacity: 75%;
+    border: 5px solid black;
+    border-radius: 10px 30px / 100px;
+    animation: changeWidth2 6s forwards;
+}
+@keyframes changeWidth2 {
+    /* Define keyframes for the animation */
+    from {
+        width: 400px;
+        
+    }
+    to {
+        width: 800px;
+        
+    }
+}
+.form-container-for-container {
+    animation-delay: 3s;
+}
+   
+    
 
     
     
