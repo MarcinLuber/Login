@@ -17,8 +17,8 @@ It is a simple login panel with the option of registering an account, connected 
 # WEBSITE APP (TRY IT)
 https://logowanie-dg95.onrender.com/
 
-# DEMO APP YT
-Watch
+# DEMO APP (YT WATCH)
+
 [![Demo](https://img.youtube.com/vi/8d5NCJSuhgo/0.jpg)](https://youtu.be/8d5NCJSuhgo)
 
 
