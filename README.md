@@ -1,7 +1,7 @@
-# WEBSITE
+# WEBSITE APP (TRY IT)
 https://logowanie-dg95.onrender.com/
 
-# DEMO
+# DEMO APP YT
 
 [![Demo](https://img.youtube.com/vi/8d5NCJSuhgo/0.jpg)](https://youtu.be/8d5NCJSuhgo)
 
