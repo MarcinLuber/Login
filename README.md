@@ -1,12 +1,30 @@
-# DEMO
-<video width="320" height="240" controls>
-  <source src="https://youtu.be/8d5NCJSuhgo" type="video/mp4">
-  Twoja przeglądarka nie obsługuje tagu video.
-</video>
-
-#WEBSITE
+# WEBSITE
 https://logowanie-dg95.onrender.com/
-#
+
+# DEMO
+
+[![Demo](https://img.youtube.com/vi/8d5NCJSuhgo/0.jpg)](https://youtu.be/8d5NCJSuhgo)
+
+# ABOUT PROJECT
+
+Login application and tic-tac-toe game
+It is a simple login panel with the option of registering an account, connected to the database and allowing you to play the Tic-Tac-Toe game after logging in.
+
+# TECHNOLOGIES USED
+
+JavaScript
+
+CSS
+
+TypeScript
+
+EJS
+
+EXPRESS
+
+NODE
+
+MONGODB
 
 
 # Login
@@ -22,8 +40,7 @@ npm install ejs
 
 npm i nodemon
 
-1. Login application and tic-tac-toe game
-It is a simple login panel with the option of registering an account, connected to the database and allowing you to play the Tic-Tac-Toe game after logging in.
+
 2. Installation and Usage:
 Installation Instructions: Provide information on how to install and configure the application.
 Usage Examples: Show simple examples of how to use the application.
